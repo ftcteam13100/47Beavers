@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FTC Team 13100 — 47 Beavers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header>
-    <img src="" alt="47 Beavers team logo placeholder">
-    <h1>FTC Team 13100 — 47 Beavers</h1>
-    <p>A FIRST Tech Challenge robotics team based in Montgomery County, Maryland</p>
+    <div class="logo-group">
+      <img src="" alt="47 Beavers team logo">
+      <h1>FTC Team 13100 — 47 Beavers</h1>
+    </div>
 
     <nav aria-label="Primary navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
@@ -27,7 +37,7 @@
 
     <!-- Hero / Home -->
     <section id="home">
-      <img src="" alt="Team photo of the 47 Beavers at a competition placeholder">
+      <img src="" alt="Team photo of the 47 Beavers at a competition">
       <h2>Welcome to 47 Beavers Robotics</h2>
       <p>
         Founded in 2017, FTC Team 13100 — the 47 Beavers — is a community
@@ -41,109 +51,131 @@
         involvement. Together we design, build, and program robots while
         developing the skills and friendships that last a lifetime.
       </p>
-      <img src="" alt="Action shot of the 47 Beavers robot on the competition field placeholder">
+      <img src="" alt="Action shot of the 47 Beavers robot on the competition field">
     </section>
 
     <!-- About Us -->
-    <section id="about">
-      <h2>About Us</h2>
-      <img src="" alt="Group photo of team members from multiple schools placeholder">
-      <p>
-        The 47 Beavers were founded in 2017 as a multi‑school FIRST Tech
-        Challenge team serving students across Montgomery County, Maryland.
-        Our roster draws from Poolesville High School, Rocky Hill Middle
-        School, and neighboring communities.
-      </p>
+    <div id="about-wrap">
+      <section id="about" class="section fade-in">
+        <h2>About Us</h2>
+        <img src="" alt="Group photo of team members from multiple schools">
+        <p>
+          The 47 Beavers were founded in 2017 as a multi‑school FIRST Tech
+          Challenge team serving students across Montgomery County, Maryland.
+          Our roster draws from Poolesville High School, Rocky Hill Middle
+          School, and neighboring communities.
+        </p>
 
-      <h3>Our Mission</h3>
-      <p>
-        Our mission is to promote STEM in the community and create meaningful
-        opportunities for younger students to explore science, technology,
-        engineering, and mathematics. We partner with both local and
-        international organizations to expand our outreach impact and inspire
-        the next generation of innovators.
-      </p>
-      <img src="" alt="Team members mentoring younger students during an outreach event placeholder">
+        <h3>Our Mission</h3>
+        <p>
+          Our mission is to promote STEM in the community and create meaningful
+          opportunities for younger students to explore science, technology,
+          engineering, and mathematics. We partner with both local and
+          international organizations to expand our outreach impact and inspire
+          the next generation of innovators.
+        </p>
+        <img src="" alt="Team members mentoring younger students during an outreach event">
 
-      <a href="#about-more">More Info</a>
-    </section>
+        <a href="#" class="btn btn-primary">More Info</a>
+      </section>
+    </div>
 
     <!-- Achievements -->
-    <section id="achievements">
-      <h2>Achievements</h2>
-      <img src="" alt="Display of team awards and trophies placeholder">
-      <p>
-        Over the years, the 47 Beavers have grown both technically and
-        personally. From our earliest competitions to our most recent season,
-        our team has earned multiple awards that symbolize our continuous
-        progress and development as engineers, collaborators, and community
-        members.
-      </p>
-      <img src="" alt="Team celebrating an award at a FIRST Tech Challenge event placeholder">
+    <div id="achievements-wrap">
+      <section id="achievements" class="section fade-in">
+        <h2>Achievements</h2>
+        <img src="" alt="Display of team awards and trophies">
+        <p>
+          Over the years, the 47 Beavers have grown both technically and
+          personally. From our earliest competitions to our most recent season,
+          our team has earned multiple awards that symbolize our continuous
+          progress and development as engineers, collaborators, and community
+          members.
+        </p>
+        <img src="" alt="Team celebrating an award at a FIRST Tech Challenge event">
 
-      <a href="#achievements-more">More Info</a>
-    </section>
+        <a href="#" class="btn btn-outline">More Info</a>
+      </section>
+    </div>
 
     <!-- Camps -->
-    <section id="camps">
-      <h2>Camps</h2>
-      <img src="" alt="Students participating in a BeaverCamp STEM activity placeholder">
-      <p>
-        The 47 Beavers host summer STEM sessions designed to spark curiosity
-        and build hands‑on skills in young learners. Our flagship program,
-        "BeaverCamps," was originally created to help students stay connected
-        and continue learning during and after the COVID‑19 pandemic.
-      </p>
-      <p>
-        These camps cover topics ranging from basic robotics and coding to
-        creative engineering challenges, giving participants a fun and
-        supportive environment to explore STEM.
-      </p>
-      <img src="" alt="Camp participants building a small robot project placeholder">
+    <div id="camps-wrap">
+      <section id="camps" class="section fade-in">
+        <h2>Camps</h2>
+        <img src="" alt="Students participating in a BeaverCamp STEM activity">
+        <p>
+          The 47 Beavers host summer STEM sessions designed to spark curiosity
+          and build hands‑on skills in young learners. Our flagship program,
+          "BeaverCamps," was originally created to help students stay connected
+          and continue learning during and after the COVID‑19 pandemic.
+        </p>
+        <p>
+          These camps cover topics ranging from basic robotics and coding to
+          creative engineering challenges, giving participants a fun and
+          supportive environment to explore STEM.
+        </p>
+        <img src="" alt="Camp participants building a small robot project">
 
-      <a href="#camps-more">More Info</a>
-    </section>
+        <a href="#" class="btn btn-primary">More Info</a>
+      </section>
+    </div>
 
     <!-- Contact Us -->
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Have questions or want to get involved? Reach out to us using the form below.</p>
+    <div id="contact-wrap">
+      <section id="contact" class="section fade-in">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to get involved? Reach out to us using the form below.</p>
 
-      <form action="#" method="post">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+        <div class="contact-grid">
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Your message…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>
+              We'd love to hear from you — whether you're a student interested
+              in joining, a parent looking for more information, or an
+              organization interested in partnering with us.
+            </p>
+            <p>Based in Montgomery County, Maryland.</p>
+          </div>
         </div>
+      </section>
+    </div>
 
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <div>
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required>
-        </div>
-
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
-
-        <button type="submit">Submit</button>
-      </form>
-
-      <!-- Sponsors -->
-      <section id="sponsors">
+    <!-- Sponsors -->
+    <div id="sponsors-wrap">
+      <section id="sponsors" class="section fade-in">
         <h3>Our Sponsors</h3>
         <p>
           We are grateful to our sponsors for their generous support. Their
           contributions enable us to pursue robotics, attend competitions, and
           expand our outreach programs across the community.
         </p>
-        <img src="" alt="Sponsor banner showing logos of organizations that support the 47 Beavers placeholder">
+        <img src="" alt="Sponsor banner showing logos of organizations that support the 47 Beavers">
       </section>
-    </section>
+    </div>
 
   </main>
 
@@ -151,6 +183,6 @@
     <p>&copy; 2025 by Beaver Robotics Booster Club.</p>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
-
