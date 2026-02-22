@@ -382,6 +382,150 @@ footer {
   font-size: 0.9rem;
 }
 
+/* ===== Page Hero (subpages) ===== */
+.page-hero {
+  position: relative;
+  background: var(--navy);
+  overflow: hidden;
+}
+
+.page-hero > img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: var(--white);
+}
+
+.page-hero-overlay h2 {
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.page-hero-overlay p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===== Alternating Background Utility ===== */
+.alt-bg {
+  background: var(--off-white);
+}
+
+/* ===== CTA Buttons (subpages) ===== */
+.btn-cta {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: var(--light-blue);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.btn-cta:hover {
+  background: #3d8fbf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(91, 164, 207, 0.45);
+}
+
+/* ===== Card Grid ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card img[src=""] {
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid var(--light-blue);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin: 1.25rem 1.5rem 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin: 0 1.5rem 1rem;
+  line-height: 1.6;
+}
+
+.card .btn-cta {
+  margin: 0 1.5rem 1.5rem;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.5rem;
+}
+
+/* ===== Steps List (BeaverPrints) ===== */
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.steps-list li {
+  background: var(--off-white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--light-blue);
+}
+
+.steps-list li h3 {
+  font-size: 1.15rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.steps-list li p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
 /* ===== Scroll Animations ===== */
 .fade-in {
   opacity: 0;
@@ -447,6 +591,18 @@ footer {
 
   #home h2 {
     font-size: 1.75rem;
+  }
+
+  .page-hero-overlay h2 {
+    font-size: 1.75rem;
+  }
+
+  .page-hero > img {
+    height: 260px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
   }
 
   #home p {
