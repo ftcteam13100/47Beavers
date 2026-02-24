@@ -18,28 +18,40 @@ if (navToggle && navMenu) {
 }
 
 // ===== Active Nav Highlighting on Scroll (homepage only) =====
-const navLinks = document.querySelectorAll('nav ul li a');
-const homeSections = document.querySelectorAll('#home, #about, #achievements, #camps, #contact');
+// Only activate scroll-based highlighting on the homepage where sections
+// exist as same-page anchors. On other pages, the server-set "active"
+// class on the nav link is sufficient and should not be overridden.
+const isHomepage = window.location.pathname.endsWith('index.html') ||
+                   window.location.pathname.endsWith('/');
 
-if (homeSections.length > 0) {
-  const activateLink = (id) => {
-    navLinks.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-    });
-  };
+if (isHomepage) {
+  const navLinks = document.querySelectorAll('nav ul li a');
+  const homeSections = document.querySelectorAll('#home, #contact');
 
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          activateLink(entry.target.id);
+  if (homeSections.length > 0) {
+    const activateLink = (id) => {
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        // Only toggle active for same-page anchor links
+        if (href.startsWith('#')) {
+          link.classList.toggle('active', href === `#${id}`);
         }
       });
-    },
-    { rootMargin: '-40% 0px -55% 0px' }
-  );
+    };
 
-  homeSections.forEach(sec => sectionObserver.observe(sec));
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            activateLink(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-40% 0px -55% 0px' }
+    );
+
+    homeSections.forEach(sec => sectionObserver.observe(sec));
+  }
 }
 
 // ===== Scroll-Triggered Fade-In Animations =====
@@ -60,7 +72,8 @@ const fadeObserver = new IntersectionObserver(
 fadeElements.forEach(el => fadeObserver.observe(el));
 
 // ===== Smooth Scroll for Same-Page Links =====
-navLinks.forEach(link => {
+const allNavLinks = document.querySelectorAll('nav ul li a');
+allNavLinks.forEach(link => {
   link.addEventListener('click', (e) => {
     const href = link.getAttribute('href');
     // Only intercept same-page anchor links (e.g. #about), not cross-page links
